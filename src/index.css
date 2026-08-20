@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@theme {
+	--color-slate-50: #121b2a;
+	--color-slate-100: #182338;
+	--color-slate-200: #26344b;
+	--color-slate-300: #3a4a63;
+	--color-slate-400: #596b86;
+	--color-slate-500: #8494ad;
+	--color-slate-600: #a5b2c5;
+	--color-slate-700: #bdc8d8;
+	--color-slate-800: #d2dae6;
+	--color-slate-900: #e7ecf4;
+	--color-slate-950: #f3f6fb;
+
+	--color-stone-50: #151e2d;
+	--color-stone-100: #1d293b;
+	--color-stone-200: #2e3b51;
+	--color-stone-300: #43526a;
+	--color-stone-400: #61728c;
+	--color-stone-500: #8b9ab0;
+	--color-stone-600: #aab7c9;
+	--color-stone-700: #c0cad9;
+	--color-stone-800: #d5dce7;
+	--color-stone-900: #e8edf4;
+
+	--color-emerald-50: #182a20;
+	--color-emerald-100: #203b2a;
+	--color-emerald-200: #365b42;
+	--color-emerald-600: #8fbd9b;
+	--color-emerald-700: #a8cdb0;
+	--color-emerald-800: #c2ddc7;
+	--color-emerald-900: #d9eadb;
+
+	--color-cyan-50: #172b2a;
+	--color-cyan-100: #20403d;
+	--color-cyan-200: #35625d;
+	--color-cyan-600: #86bcb3;
+	--color-cyan-700: #a1d0c8;
+	--color-cyan-900: #c5e4df;
+
+	--color-blue-50: #171f38;
+	--color-blue-100: #242e52;
+	--color-blue-200: #384875;
+	--color-blue-600: #8d9ed4;
+	--color-blue-700: #aab8e2;
+	--color-blue-900: #d0d8f2;
+
+	--color-violet-50: #211d38;
+	--color-violet-100: #332d55;
+	--color-violet-200: #51477d;
+	--color-violet-500: #9d91d0;
+	--color-violet-600: #b9ade5;
+
+	--color-orange-50: #2a261d;
+	--color-orange-100: #403722;
+	--color-orange-200: #665631;
+	--color-orange-500: #c2a36f;
+	--color-orange-600: #d1b580;
+	--color-orange-700: #dfc995;
+	--color-orange-900: #edddb2;
+
+	--color-rose-50: #2b2223;
+	--color-rose-100: #432f30;
+	--color-rose-200: #684848;
+	--color-rose-600: #c58f8a;
+	--color-rose-700: #d2a29d;
+	--color-rose-800: #dfb8b2;
+	--color-rose-900: #ebccc6;
+
+	--color-amber-50: #2a281d;
+	--color-amber-100: #413c24;
+	--color-amber-200: #655d35;
+	--color-amber-700: #d0bd72;
+	--color-amber-900: #e3d395;
+
+	--color-red-600: #c58f8a;
+	--color-red-800: #dfb8b2;
+}
+
+@layer base {
+	body {
+		background: #0d1420;
+		color: #e7ecf4;
+	}
+
+	#root {
+		min-height: 100vh;
+	}
+
+	html {
+		scrollbar-color: #596b86 transparent;
+		scrollbar-width: thin;
+		scrollbar-gutter: stable;
+	}
+
+	::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	::-webkit-scrollbar-thumb {
+		border: 2px solid transparent;
+		border-radius: 999px;
+		background-clip: padding-box;
+		background-color: #596b86;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background-color: #8494ad;
+	}
+
+	input[type="number"] {
+		-moz-appearance: textfield;
+	}
+
+	input[type="number"]::-webkit-inner-spin-button,
+	input[type="number"]::-webkit-outer-spin-button {
+		margin: 0;
+		-webkit-appearance: none;
+	}
+}
+
+@layer utilities {
+	.select-arrow-wrapper:hover .select-arrow {
+		color: #aab8e2;
+		transform: translateY(-40%);
+	}
+
+	.select-dropdown-indicator {
+		transition: color 200ms ease, transform 200ms ease;
+	}
+
+	.select-dropdown-indicator:hover,
+	.group:hover .select-dropdown-indicator {
+		color: #aab8e2;
+		transform: translateY(1px);
+	}
+
+	.bg-white {
+		background-color: #182338;
+	}
+
+	.bg-white\/80 {
+		background-color: rgb(24 35 56 / 0.88);
+	}
+
+	.bg-slate-900 {
+		background-color: #0b111c;
+	}
+
+	.hover\:bg-slate-700:hover {
+		background-color: #26344b;
+	}
+}
