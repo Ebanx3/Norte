@@ -37,8 +37,6 @@ interface OnboardingProps {
 export const Onboarding = ({
   draftName,
   setDraftName,
-  draftWeight,
-  setDraftWeight,
   selected,
   submitted,
   toggleCategory,
