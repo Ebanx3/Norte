@@ -1,6 +1,7 @@
 import { useExercisesContext } from "../../../contexts/useExercisesContext";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { AdviceCarousel } from "../../ui/AdviceCarousel";
 import { AddExerciseModal } from "./addExerciseModal";
 import { ExerciseActionButton } from "./exerciseActionButton";
 import { ExerciseItem } from "./exerciseItem";
@@ -46,6 +47,8 @@ export const Exercises = () => {
                 weekExercises={getLastWeekExercises().length}
                 monthExercises={getLastMonthExercises().length}
             />
+
+            <AdviceCarousel />
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
                 <div className="flex items-center justify-between gap-4">

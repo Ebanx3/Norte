@@ -12,6 +12,7 @@ export const AddBookModal = ({ onClose }: Props) => {
   const [author, setAuthor] = useState("");
   const [totalPages, setTotalPages] = useState("");
   const [startDate, setStartDate] = useState(new Date().toISOString().slice(0, 10));
+  const [alreadyRead, setAlreadyRead] = useState(false);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -30,8 +31,8 @@ export const AddBookModal = ({ onClose }: Props) => {
       name: name.trim(),
       author: author.trim(),
       totalPages: parsedPages,
-      currentPage: 0,
-      completed: false,
+      currentPage: alreadyRead ? parsedPages : 0,
+      completed: alreadyRead,
       startDate: new Date(`${startDate}T00:00:00`).toISOString(),
     });
     toast.success("Libro agregado correctamente.");
@@ -57,6 +58,10 @@ export const AddBookModal = ({ onClose }: Props) => {
             <label className="grid gap-2 text-sm text-slate-700"><span className="font-medium">Páginas totales</span><input type="number" min="1" step="1" value={totalPages} onChange={(event) => setTotalPages(event.target.value)} placeholder="300" className="w-full rounded-3xl border border-slate-300 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-slate-500" /></label>
             <label className="grid gap-2 text-sm text-slate-700"><span className="font-medium">Inicio</span><input type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)} className="w-full rounded-3xl border border-slate-300 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-slate-500" /></label>
           </div>
+          <label className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700">
+            <input type="checkbox" checked={alreadyRead} onChange={(event) => setAlreadyRead(event.target.checked)} className="h-4 w-4 rounded border-slate-300 text-slate-900 focus:ring-slate-500" />
+            <span>Ya lo leí</span>
+          </label>
           <div className="flex justify-end gap-3 pt-2"><button type="button" onClick={onClose} className="rounded-3xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50">Cancelar</button><button type="submit" className="rounded-3xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700">Guardar libro</button></div>
         </form>
       </div>

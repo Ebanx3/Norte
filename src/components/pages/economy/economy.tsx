@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useEconomyContext } from "../../../contexts/useEconomyContext";
 import { useSiteContext } from "../../../contexts/useSiteContext";
 import { formatAmount } from "../../../utils/formatAmount";
+import { AdviceCarousel } from "../../ui/AdviceCarousel";
 import { EconomyActionButtons } from "./economyActionButtons";
 import { Summary } from "./summary";
 import { AddACtivityModal } from "./addNewActivityModal";
@@ -29,6 +30,11 @@ export const Economy = () => {
         />
         <EconomyActionButtons showModal={showActivityModal} />
         <TotalValuesSection />
+
+        <AdviceCarousel
+          title="Tips para tu economía"
+          subtitle="Consejo"
+        />
 
         <MovementsSection />
       </div>

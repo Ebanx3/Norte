@@ -1,12 +1,11 @@
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import { Home } from "./components/pages/home/home";
 import { NavBar } from "./components/navbar/navbar";
 import { Economy } from "./components/pages/economy/economy";
 import { Exercises } from "./components/pages/exercises/exercises";
 import { Meditating } from "./components/pages/meditating/meditating";
 import { Reading } from "./components/pages/reading/reading";
-// import { Economy } from "../non/economy";
-import { ToastContainer } from 'react-toastify';
 import { ContextsProviders } from "./contexts/contextsProviders";
 
 export const App = () => {

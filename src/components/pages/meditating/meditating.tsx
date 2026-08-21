@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { useMeditatingContext } from "../../../contexts/useMeditatingContext";
+import { AdviceCarousel } from "../../ui/AdviceCarousel";
 import { AddMeditationModal } from "./addMeditationModal";
 import { MeditationActionButton } from "./meditationActionButton";
 import { MeditationLinks } from "./meditationLinks";
@@ -49,6 +50,8 @@ export const Meditating = () => {
         monthSessions={getLastMonthSessions().length}
         completedSessions={getCompletedSessions().length}
       />
+
+      <AdviceCarousel />
 
       <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
         <div className="flex flex-wrap items-end justify-between gap-4">

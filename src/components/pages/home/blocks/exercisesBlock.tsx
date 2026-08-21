@@ -38,9 +38,9 @@ export const ExercisesBlock = () => {
             <p className="text-xs uppercase tracking-[0.24em] text-orange-700">Calorías quemadas</p>
             <p className="mt-2 text-xl font-semibold text-orange-900 ml-auto">{caloriesBurned} kcal</p>
           </div>
-          <div className="rounded-3xl bg-purple-950 p-4 shadow-sm border border-purple-500 flex flex-col justify-between">
-            <p className="text-xs uppercase tracking-[0.24em] text-purple-400">Total ejercicios</p>
-            <p className="mt-2 text-xl font-semibold text-purple-100 ml-auto">{weekExercises.length}</p>
+          <div className="rounded-3xl bg-slate-900 p-4 shadow-sm border border-slate-400 flex flex-col justify-between">
+            <p className="text-xs uppercase tracking-[0.24em] text-slate-500">Total ejercicios</p>
+            <p className="mt-2 text-xl font-semibold text-white ml-auto">{weekExercises.length}</p>
           </div>
         </div>
       </div>

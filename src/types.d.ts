@@ -71,6 +71,7 @@ type MeditationSite = "youtube" | "spotify" | "soundcloud" | "insight_timer" | "
 interface MeditationLink {
     url: string;
     site: MeditationSite;
+    label?: string;
 }
 
 interface MeditationSession {

@@ -66,7 +66,7 @@ export const Onboarding = ({
           ) : null}
         </label>
 
-        <label className="grid gap-2 text-sm text-slate-700">
+        {/* <label className="grid gap-2 text-sm text-slate-700">
           <span className="font-medium">Peso (kg)</span>
           <input
             type="number"
@@ -81,7 +81,7 @@ export const Onboarding = ({
           {submitted && draftWeight <= 0 ? (
             <span className="text-xs text-red-600">Introduce un peso válido para continuar.</span>
           ) : null}
-        </label>
+        </label> */}
       </div>
 
       <div className="grid gap-4">
